@@ -3621,7 +3621,7 @@ blockquote {
   background-repeat: repeat, no-repeat;
   background-size: auto, contain;
   margin-top: -88px;
-  padding-top: 160px;
+
 }
 
 .section.hero-team {
@@ -3919,6 +3919,18 @@ blockquote {
 
 .space-120 {
   height: 120px;
+}
+
+
+.location{
+  display: flex;
+  gap: 10px;
+}
+
+@media (max-width: 750px){
+  .location{
+    flex-direction: column;
+  }
 }
 
 .wrap-numbers {
@@ -5419,7 +5431,35 @@ blockquote {
 .dropdown-content a {
   text-decoration: none;
   padding: 14px 4px;
+  text-align: start; /* Center align text */
+  width: 100%; /* Full width for links */
 }
+
+@media (max-width: 990px) {
+  .dropdown-content {
+    position: static;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px; /* Add some space between the link and the dropdown */
+    width: 100%; /* Full width on mobile view */
+  }
+
+  .dropdown-content a{
+    text-align: center;
+  }
+
+  .nav-link:hover .dropdown-content {
+    display: none; /* Disable hover effect on mobile */
+  }
+
+  .nav-link .dropdown-content.show {
+    display: flex;
+  }
+
+}
+
+
+
 .inside-project-name {
   grid-column-gap: 12px;
   justify-content: flex-start;
@@ -6431,10 +6471,10 @@ blockquote {
   max-width: 600px;
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 1024px) {
   .image-content {
     width: 60%;
-    display: block;
+    display: none;
   }
 }
 
@@ -6474,6 +6514,7 @@ blockquote {
 
 .placement{
   margin-top: 50px;
+  overflow-x: hidden;
 }
 
 /* benefits */
@@ -6829,6 +6870,12 @@ blockquote {
 
   .grid-thirds.locations-thirds {
     grid-template-columns: 1fr;
+  }
+
+  @media (max-width: 750px){
+    .grid-thirds.locations-thirds{
+      grid-template-rows: 1fr;
+    }
   }
 
   .logos-master {
@@ -9648,6 +9695,23 @@ blockquote {
 .yut {
   border-radius: 32px;
 }
+
+@media (max-width: 800px){
+  .yut {
+    height: 300px;
+  }
+}
+@media (max-width: 500px){
+  .yut {
+    height: 250px;
+  }
+}
+@media (min-width: 1600px){
+  .yut {
+    height: 520px;
+  }
+}
+
 .pook {
   margin-top: 50px;
 }
@@ -9712,7 +9776,6 @@ blockquote {
 
 .about {
   margin-bottom: 10px;
-  /*   transform: scale(0.5) translate(0px, 80px); */
   transform: scale(0.5);
   transform-origin: left bottom;
 }
@@ -9780,7 +9843,6 @@ blockquote {
 }
 
 .card.hover .about {
-  /*   transform: scale(1) translate(0, -5px); */
   transform: scale(1);
   margin-bottom: 20px;
 }
@@ -9794,17 +9856,68 @@ blockquote {
 }
 
 .promo:hover * {
-  /*   transition: all 400ms cubic-bezier(0.22, 1, 0.36, 1); */
+  transition: all 400ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .card:hover img {
-  /*   transform: scale(1.1); */
+  transform: scale(1.1);
 }
 
 .card:hover .btn {
   background: #a95ce5;
   color: white;
 }
+
+/* Media Query for Mobile View */
+@media (max-width: 1040px) {
+  .promo {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .card {
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .card .data .header {
+    font-size: 24px;
+  }
+
+  .card .data .discription {
+    font-size: 14px;
+  }
+
+  .card .data .meta {
+    font-size: 14px;
+  }
+
+  .card .btn {
+    font-size: 16px;
+  }
+
+  /* Ensure hover effects do not apply on mobile */
+  .card:hover .about,
+  .card:hover .data .discription,
+  .card:hover .btn,
+  .card:hover .data .meta li:nth-child(7),
+  .card:hover .data .meta li:nth-child(6),
+  .card:hover .data .meta li:nth-child(5),
+  .card:hover .data .meta li:nth-child(4) {
+    opacity: 1;
+  }
+
+  .card:hover img {
+    transform: none;
+  }
+
+  .card.hover {
+    width: 100%;
+  }
+}
+
 .moveright {
   float: right;
 }
@@ -9858,6 +9971,7 @@ blockquote {
   width: 100%;
   height: 500px;
   overflow-y: hidden;
+  overflow-x: hidden;
   margin-top: 40px;
 }
 .main-robot {
@@ -9926,6 +10040,7 @@ blockquote {
 /* hr robot */
 
 .hrrobot-container {
+  margin-top: -50px;
   display: flex;
   justify-content: center;
   width: 100%;
