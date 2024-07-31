@@ -9375,7 +9375,7 @@ blockquote {
 
 /* service cards */
 .card_serv {
-  width: 400px;
+  width: 30%;
   height: 100%;
   margin: 0 auto;
   background: linear-gradient(0deg, #000, #272727);
@@ -9392,6 +9392,10 @@ blockquote {
 @media (max-width: 844px)  {
   .bento-grid {
     flex-direction: column;
+  }
+
+  .card_serv {
+    width: 90%;
   }
 }
 .tools {
