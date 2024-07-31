@@ -9386,6 +9386,13 @@ blockquote {
   display: flex;
   justify-content: space-between;
   margin-top: 80px;
+  gap: 10px;
+}
+
+@media (max-width: 844px)  {
+  .bento-grid {
+    flex-direction: column;
+  }
 }
 .tools {
   display: flex;
@@ -9393,6 +9400,7 @@ blockquote {
   padding: 9px;
   gap: 5px;
 }
+
 
 .circle {
   padding: 0 4px;
