@@ -3912,6 +3912,17 @@ blockquote {
   text-align: -webkit-center;
 }
 
+@media (max-width : 720px){
+  .center-text {
+    text-align:left;
+    text-align: -webkit-left;
+  }
+
+  .center-content{
+    align-items: start;
+  }
+}
+
 .limit-720 {
   max-width: 720px;
   text-align: -webkit-center;
@@ -4754,6 +4765,13 @@ blockquote {
   font-weight: 600;
   line-height: 89%;
 }
+
+@media (max-width:724px){
+  .content-top{
+    font-size: 40px;
+  }
+}
+
 .master-blur-background-three {
   z-index: -1;
   width: 100%;
@@ -6468,7 +6486,7 @@ blockquote {
 
 .image-content {
   width: 100%;
-  max-width: 600px;
+  max-width: 350px;
 }
 
 @media (max-width: 1024px) {
@@ -9983,6 +10001,13 @@ blockquote {
   margin-top: 80px;
   margin-bottom: 50px;
 }
+
+@media (max-width: 1224px){
+  .header-text.hero-desc{
+    font-size: 26px;
+  }
+}
+
 .header-text h1 {
   text-align: center;
   font-size: 60px;
@@ -9991,7 +10016,6 @@ blockquote {
 }
 .header-text p {
   text-align: center;
-  font-size: 28px;
   font-family: "Montserrat", sans-serif;
   text-align: center;
   max-width: 700px;
