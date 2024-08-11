@@ -9911,17 +9911,17 @@ blockquote {
   }
 
   /* Ensure hover effects do not apply on mobile */
-  .card:hover .about,
-  .card:hover .data .discription,
-  .card:hover .btn,
-  .card:hover .data .meta li:nth-child(7),
-  .card:hover .data .meta li:nth-child(6),
-  .card:hover .data .meta li:nth-child(5),
-  .card:hover .data .meta li:nth-child(4) {
+  .card .about,
+  .card .data .discription,
+  .card .btn,
+  .card .data .meta li:nth-child(7),
+  .card .data .meta li:nth-child(6),
+  .card .data .meta li:nth-child(5),
+  .card .data .meta li:nth-child(4) {
     opacity: 1;
   }
 
-  .card:hover img {
+  .card img {
     transform: none;
   }
 
@@ -10025,7 +10025,6 @@ blockquote {
   margin-bottom: 20px;
   font-family: "Montserrat", sans-serif;
 }
-
 
 
 
