@@ -9452,6 +9452,7 @@ blockquote {
 @media (max-width: 844px) {
   .bento-grid {
     flex-direction: column;
+    gap:20px
   }
 
   .card_serv {
