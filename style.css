@@ -10007,12 +10007,12 @@ blockquote {
   text-align: left;
   color: white; /* Ensure the text is visible over the image */
   /* max-width: 900px; */
-  width: 50%;
+  width: 60%;
   padding: 20px;
 }
 
 .hero-text h1 {
-  font-size: clamp(28px, 12vw, 50px);
+  font-size: clamp(24px, 5vw, 45px);
   font-weight: 600;
   text-transform: capitalize;
   font-family: "Montserrat", sans-serif;
