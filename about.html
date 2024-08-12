@@ -259,7 +259,7 @@
     </div>
 
     <div class="section">
-      <div class="main-container w-container youtube">
+      <div class="main-container youtube">
         <iframe
           width="80%"
           height="450"
@@ -273,9 +273,7 @@
         ></iframe>
       </div>
     </div>
-    <div class="section">
-      <div class="main-container ">
-        <!-- clients -->
+
         <!-- clients -->
         <style>
           :root {
@@ -289,7 +287,7 @@
             );
             --marquee-animation-duration: calc(var(--marquee-elements) * 3s);
           }
-
+    
           .marquee {
             width: var(--marquee-width);
             height: 100%;
@@ -299,29 +297,26 @@
             margin-bottom: 100px;
             margin-top: 100px;
           }
-
+    
           .marquee-content {
             list-style: none;
             height: 100%;
             display: flex;
-            animation: scrolling var(--marquee-animation-duration) linear
-              infinite;
+            animation: scrolling var(--marquee-animation-duration) linear infinite;
           }
-
+    
           @keyframes scrolling {
             0% {
               transform: translateX(0);
             }
-
+    
             100% {
               transform: translateX(
-                calc(
-                  -1 * var(--marquee-element-width) * var(--marquee-elements)
-                )
+                calc(-1 * var(--marquee-element-width) * var(--marquee-elements))
               );
             }
           }
-
+    
           .marquee-content li {
             display: flex;
             justify-content: center;
@@ -334,40 +329,40 @@
             /* 5rem; */
             white-space: nowrap;
           }
-
+    
           .marquee-content li img {
             max-width: 150px;
             max-height: 60px;
             /* height: 100%; */
           }
-
+    
           @media (max-width: 600px) {
             :root {
               --marquee-width: 100vw;
               --marquee-height: 16vh;
               --marquee-elements-displayed: 3;
             }
-
+    
             .marquee:before,
             .marquee:after {
               width: 5rem;
             }
           }
-
+    
           @media (max-width: 500px) {
             :root {
               --marquee-width: 100vw;
               --marquee-height: 16vh;
               --marquee-elements-displayed: 2;
             }
-
+    
             .marquee:before,
             .marquee:after {
               width: 5rem;
             }
           }
         </style>
-
+    
         <div class="marquee">
           <ul class="marquee-content">
             <li>
@@ -398,12 +393,12 @@
                     .cls-1 {
                       fill: #4d4d4f;
                     }
-
+    
                     .cls-1,
                     .cls-2 {
                       stroke-width: 0px;
                     }
-
+    
                     .cls-2 {
                       fill: #e31837;
                       fill-rule: evenodd;
@@ -476,18 +471,8 @@
                 </g>
               </svg>
             </li>
-            <li>
-              <img
-                src="https://ik.imagekit.io/czay6zcnk/Codenera/thinkitive-dark.svg?updatedAt=1723402663848"
-                alt="logos-slider"
-              />
-            </li>
-            <li>
-              <img
-                src="https://ik.imagekit.io/czay6zcnk/Codenera/gslabs.png?updatedAt=1723402655179"
-                alt="logos-slider"
-              />
-            </li>
+            <li><img src="https://ik.imagekit.io/czay6zcnk/Codenera/thinkitive-dark.svg?updatedAt=1723402663848" alt="logos-slider" /></li>
+            <li><img src="https://ik.imagekit.io/czay6zcnk/Codenera/gslabs.png?updatedAt=1723402655179" alt="logos-slider" /></li>
             <li>
               <svg
                 width="136"
@@ -521,47 +506,29 @@
                 alt="logos-slider"
               />
             </li>
-            <li>
-              <img
-                src="https://ik.imagekit.io/czay6zcnk/Codenera/quickheal.png?updatedAt=1723402659545"
-                alt="logos-slider"
-              />
-            </li>
-            <li>
-              <img
-                src="https://ik.imagekit.io/czay6zcnk/Codenera/amdocs.png?updatedAt=1723402655172"
-                alt="logos-slider"
-              />
-            </li>
-            <li>
-              <img
-                src="https://ik.imagekit.io/czay6zcnk/Codenera/Xoriant-Logo.png?updatedAt=1723402663731"
-                alt="logos-slider"
-              />
-            </li>
+            <li><img src="https://ik.imagekit.io/czay6zcnk/Codenera/quickheal.png?updatedAt=1723402659545" alt="logos-slider" /></li>
+            <li><img src="https://ik.imagekit.io/czay6zcnk/Codenera/amdocs.png?updatedAt=1723402655172" alt="logos-slider" /></li>
+            <li><img src="https://ik.imagekit.io/czay6zcnk/Codenera/Xoriant-Logo.png?updatedAt=1723402663731" alt="logos-slider" /></li>
           </ul>
         </div>
-
+    
         <script>
           const root = document.documentElement;
-          const marqueeElementsDisplayed = getComputedStyle(
-            root
-          ).getPropertyValue("--marquee-elements-displayed");
+          const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue(
+            "--marquee-elements-displayed"
+          );
           const marqueeContent = document.querySelector("ul.marquee-content");
-
+    
           root.style.setProperty(
             "--marquee-elements",
             marqueeContent.children.length
           );
-
+    
           for (let i = 0; i < marqueeElementsDisplayed; i++) {
-            marqueeContent.appendChild(
-              marqueeContent.children[i].cloneNode(true)
-            );
+            marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
           }
         </script>
-      </div>
-    </div>
+
     <div class="section gradient-one">
       <div class="main-container w-container">
         <div class="center-text">
