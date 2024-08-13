@@ -10044,7 +10044,12 @@ blockquote {
   border-radius: 30px;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit:cover;
+  object-position: right;
+}
+
+@media (max-width: 400px) {
+  
 }
 
 .hero-black-layer {
@@ -10070,6 +10075,10 @@ blockquote {
 
   .hero-desc {
     font-size: 16px;
+  }
+
+  .hero.bg{
+    object-position: right;
   }
 
   .styled-button {
