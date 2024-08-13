@@ -5503,6 +5503,20 @@ blockquote {
   padding: 40px 50px;
   display: flex;
   place-items: center;
+  width: 50%;
+}
+
+@media screen and (max-width: 767px) {
+  .tile-office {
+  grid-row-gap: 16px;
+  border: 1px solid #3e3d3d;
+  border-radius: 8px;
+  flex-direction: column;
+  padding: 40px 50px;
+  display: flex;
+  place-items: center;
+  width: 100%;
+}
 }
 
 .link-location {
@@ -7630,6 +7644,7 @@ blockquote {
   .link-project {
     min-height: 330px;
   }
+
 
   .tile-office,
   .contact-quote-wrap {

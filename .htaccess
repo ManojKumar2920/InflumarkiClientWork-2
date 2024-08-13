@@ -1,0 +1,17 @@
+# Enable Rewrite Engine
+RewriteEngine On
+
+# Remove .html extension from specific URLs
+RewriteRule ^index$ index.html [L]
+RewriteRule ^about$ about.html [L]
+RewriteRule ^hr$ hr.html [L]
+RewriteRule ^contact$ contact.html [L]
+
+RewriteRule ^courses/artificial-intelligence$ courses/artificial-intelligence.html [L]
+RewriteRule ^courses/coding-specialization$ courses/coding-specialization.html [L]
+RewriteRule ^courses/data-specialization$ courses/data-specialization.html [L]
+
+# Redirect everything else to index.html (for single-page applications or fallback)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.html [L]
