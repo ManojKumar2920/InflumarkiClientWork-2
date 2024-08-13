@@ -223,8 +223,8 @@
           <div class="hero-text">
             <h1>Unlimited placement drives until you are placed</h1>
             <p class="hero-desc" style="font-size: 20px; padding-bottom: 20px">
-              Industry level training with real time projects at zero cost & we
-              help you match your talent with the right opportunity.
+              Industry level training with real time projects & we help you
+              match your talent with the right opportunity.
             </p>
             <button class="styled-button" onclick="location.href='/contact'">
               Enroll Now
@@ -891,6 +891,40 @@
     </script>
 
     <!-- testimonials -->
+
+    <style>
+      @keyframes scrolling-testimonial-vertical {
+        0% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(
+            -800px
+          ); /* Calculated based on the total height */
+        }
+      }
+
+      .wrap-testimonials-vertical {
+        position: relative;
+        height: 400px; /* Equivalent to --testimonial-marquee-height */
+        overflow: hidden;
+      }
+
+      .testimonials-vertical-grid {
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-rows: repeat(
+          5,
+          1fr
+        ); /* Equivalent to --testimonial-elements-displayed */
+        animation: scrolling-testimonial-vertical 15s linear infinite;
+        /* 15s calculated as (number of elements) * 3s */
+      }
+
+      .column-testimonials-vertical {
+        height: 80px; /* Equivalent to --testimonial-element-height */
+      }
+    </style>
     <div class="section">
       <div class="main-container w-container">
         <div class="center-text">
