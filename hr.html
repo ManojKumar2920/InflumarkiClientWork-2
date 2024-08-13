@@ -170,11 +170,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 40px 20px;
+        padding: 100px;
         backdrop-filter: blur(10px);
         margin-top: 100px;
       }
-
+    
       .container {
         max-width: 1200px;
         width: 100%;
@@ -184,79 +184,96 @@
         flex-wrap: wrap;
         gap: 20px;
       }
-
+    
       .grid {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two cards per row by default */
         gap: 20px;
-        flex-wrap: wrap;
+        width: 100%;
       }
-
+    
       .service-card {
         backdrop-filter: blur(20px);
         border-radius: 15px;
         background-color: #121212;
         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
         padding: 20px;
-        width: 300px;
         color: #ffffff;
         text-align: center;
         transition: transform 0.3s ease;
       }
-
+    
       .service-card:hover {
         transform: translateY(-10px);
       }
-
+    
       .controls {
         display: flex;
         justify-content: center;
         gap: 10px;
         margin-bottom: 15px;
       }
-
+    
       .circle {
         width: 12px;
         height: 12px;
         border-radius: 50%;
         display: inline-block;
       }
-
+    
       .red-dot {
         background-color: #ff5f56;
       }
-
+    
       .yellow-dot {
         background-color: #ffbd2e;
       }
-
+    
       .green-dot {
         background-color: #27c93f;
       }
-
+    
       .card-content h3 {
         margin-bottom: 15px;
         color: #ffffff;
+        font-size: 24px;
       }
-
+    
+      .card-content p {
+        font-size: 16px;
+        color: #d0d0d0;
+        margin-bottom: 15px;
+      }
+    
       .card-content ul {
         list-style-type: none;
         padding: 0;
+        font-size: 14px;
       }
-
+    
       .card-content ul li {
         margin-bottom: 10px;
         color: #d0d0d0;
       }
+    
+      /* Responsive styling for mobile */
+      @media (max-width: 768px) {
 
-      .new-service-card {
-        border: 2px solid rgba(255, 255, 255, 0.5);
+        .service-section{
+          padding: 50px;
+        }
+
+        .grid {
+          grid-template-columns: 1fr; /* One card per row on mobile */
+        }
       }
     </style>
+    
+    
+    
 
-    <section class="service-section">
-      <div class="container">
+    <section class="service-section section">
+      <div class="container w-container">
         <div class="grid">
           <div class="service-card">
             <div class="controls">
@@ -271,14 +288,14 @@
               </div>
             </div>
             <div class="card-content">
-              <h3>Training (Zero Cost)</h3>
+              <h3>Trained Fresher at Zero Cost</h3>
+              <p>(From our pool of candidates)</p>
               <ul>
                 <li>Java</li>
                 <li>Python</li>
                 <li>Data Science</li>
                 <li>Data Analytics</li>
                 <li>MERN Stack Developer</li>
-                <li>From our pool of candidates</li>
               </ul>
             </div>
           </div>
@@ -295,7 +312,8 @@
               </div>
             </div>
             <div class="card-content">
-              <h3>Customized Training Module (Zero Cost)</h3>
+              <h3>Customized Training Module at Zero Cost</h3>
+              <p>If you have certain requirement for your project and you need training apart from technology</p>
               <ul>
                 <li>
                   Select student after interview from our pool of candidates
@@ -318,7 +336,28 @@
               </div>
             </div>
             <div class="card-content">
+              <h3>Experienced Resources</h3>
+              <p>Worried about experienced hiring ? </p>
+              <ul>
+                <li>Give your requirement to Codenera , with our experienced IT recruiters , we would help you in finding the right fit and help you find best experienced IT resource.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="controls">
+              <div class="circle">
+                <span class="red-dot"></span>
+              </div>
+              <div class="circle">
+                <span class="yellow-dot"></span>
+              </div>
+              <div class="circle">
+                <span class="green-dot"></span>
+              </div>
+            </div>
+            <div class="card-content">
               <h3>Training for your employee</h3>
+              <p>Get offline/online IT training for your existing team members</p>
               <ul>
                 <li>Corporate-level training for your employees</li>
                 <li>Contact HR</li>
@@ -434,15 +473,15 @@
             data-w-id="80de1f40-db49-7bca-8d21-d2a5219a976a"
             class="center-content"
           >
-            <h1>Why don’t you start today?</h1>
+            <h1>Hire best IT folks for your team ?</h1>
             <div class="space-16"></div>
             <div class="limit-630">
               <div>
-                Take the first step toward achieving your goals. Whether you're looking to upskill, pivot careers, or land your dream job, Codenera is here to support your journey.
+                A dedicated relationship manager will be assigned to you , which will help you in from getting to know your requirements , to sourcing candidates , to scheduling interviews , to documentation process and even ensuring that the resource is performing well after selections .
               </div>
             </div>
             <div class="space-40"></div>
-            <a href="" target="_blank" class="cta w-button">Contact Us Now</a>
+            <a href="mailto:hr@codenera.in" target="_blank" class="cta w-button">Contact Us Now</a>
           </div>
         </div>
       </div>
