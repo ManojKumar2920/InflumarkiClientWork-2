@@ -1,21 +1,12 @@
-<IfModule mod_rewrite.c>
-  RewriteEngine On
-  RewriteBase /  # Adjust if your app is in a subdirectory
-  
-    # Rewrite internships/apply to internships/apply.html
-  RewriteRule ^courses/artificial-intelligence$ /courses/artificial-intelligence.html [L]
-  RewriteRule ^courses/coding-specialization$ /courses/coding-specialization.html [L]
-  RewriteRule ^courses/data-specialization$ /courses/data-specialization.html [L]
-  RewriteRule ^about$ /about.html [L]
-  RewriteRule ^hr$ /hr.html [L]
-  RewriteRule ^contact$ /contact.html [L]
+# Enable Rewrite Engine
+RewriteEngine On
 
-  # Block access to internships/index.html
-  RewriteRule ^courses/index\.html$ - [F,L]
-  
-  # Handle all requests except for static files, API routes, or existing files
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{REQUEST_FILENAME} !-l
-  RewriteRule ^.* /index.html [L]
-</IfModule>
+# Remove .html extension from specific URLs
+RewriteRule ^(.*)$ $index.html [L]
+RewriteRule ^about$ about.html [L]
+RewriteRule ^hr$ hr.html [L]
+RewriteRule ^contact$ contact.html [L]
+
+RewriteRule ^courses/artificial-intelligence$ courses/artificial-intelligence.html [L]
+RewriteRule ^courses/coding-specialization$ courses/coding-specialization.html [L]
+RewriteRule ^courses/data-specialization$ courses/data-specialization.html [L]
