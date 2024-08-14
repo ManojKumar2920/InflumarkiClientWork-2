@@ -6,6 +6,7 @@ RewriteRule ^index$ index.html [L]
 RewriteRule ^about$ about.html [L]
 RewriteRule ^hr$ hr.html [L]
 RewriteRule ^contact$ contact.html [L]
+RewriteRule ^thankyou$ thankyou.html [L]
 
 RewriteRule ^courses/artificial-intelligence$ courses/artificial-intelligence.html [L]
 RewriteRule ^courses/coding-specialization$ courses/coding-specialization.html [L]

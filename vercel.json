@@ -3,6 +3,7 @@
       { "source": "/about", "destination": "/about.html" },
       { "source": "/hr", "destination": "/hr.html" },
       { "source": "/contact", "destination": "/contact.html" },
+      { "source": "/thankyou", "destination": "/thankyou.html" },
       { "source": "/courses/artificial-intelligence", "destination": "/courses/artificial-intelligence.html" },
       { "source": "/courses/coding-specialization", "destination": "/courses/coding-specialization.html" },
       { "source": "/courses/data-specialization", "destination": "/courses/data-specialization.html" }
