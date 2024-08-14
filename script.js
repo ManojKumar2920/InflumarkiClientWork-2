@@ -42541,66 +42541,8 @@ Arguments: ` +
             E();
           }
         }
-        function x() {
-          (y = !0),
-            n.on("submit", s + " form", function (ie) {
-              var J = e.data(this, s);
-              J.handler && ((J.evt = ie), J.handler(J));
-            });
-          let ee = ".w-checkbox-input",
-            ce = ".w-radio-input",
-            C = "w--redirected-checked",
-            I = "w--redirected-focus",
-            z = "w--redirected-focus-visible",
-            _ = ":focus-visible, [data-wf-focus-visible]",
-            Y = [
-              ["checkbox", ee],
-              ["radio", ce],
-            ];
-          n.on(
-            "change",
-            s + ' form input[type="checkbox"]:not(' + ee + ")",
-            (ie) => {
-              e(ie.target).siblings(ee).toggleClass(C);
-            }
-          ),
-            n.on("change", s + ' form input[type="radio"]', (ie) => {
-              e(`input[name="${ie.target.name}"]:not(${ee})`).map((pe, _e) =>
-                e(_e).siblings(ce).removeClass(C)
-              );
-              let J = e(ie.target);
-              J.hasClass("w-radio-input") || J.siblings(ce).addClass(C);
-            }),
-            Y.forEach(([ie, J]) => {
-              n.on(
-                "focus",
-                s + ` form input[type="${ie}"]:not(` + J + ")",
-                (pe) => {
-                  e(pe.target).siblings(J).addClass(I),
-                    e(pe.target).filter(_).siblings(J).addClass(z);
-                }
-              ),
-                n.on(
-                  "blur",
-                  s + ` form input[type="${ie}"]:not(` + J + ")",
-                  (pe) => {
-                    e(pe.target).siblings(J).removeClass(`${I} ${z}`);
-                  }
-                );
-            });
-        }
-        function P(ee) {
-          var ce = (ee.btn = ee.form.find(':input[type="submit"]'));
-          (ee.wait = ee.btn.attr("data-wait") || null),
-            (ee.success = !1),
-            ce.prop("disabled", !1),
-            ee.label && ce.val(ee.label);
-        }
-        function D(ee) {
-          var ce = ee.btn,
-            C = ee.wait;
-          ce.prop("disabled", !0), C && ((ee.label = ce.val()), ce.val(C));
-        }
+        
+      
         function Q(ee, ce) {
           var C = null;
           return (

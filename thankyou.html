@@ -175,8 +175,8 @@
     >
       <div class="main-container w-container">
         <div class="center-text">
-          <h1>Worldwide coverage</h1>
-          <div class="subtitle">We are located in two different cities</div>
+          <h1>Thanks for the submission!</h1>
+          <div class="subtitle">Our team will contact you soon...!</div>
         </div>
         <div class="space-80"></div>
         <div class="location">
@@ -214,139 +214,7 @@
         </div>
       </div>
     </div>
-    <div class="section">
-      <div class="main-container w-container">
-        <div class="master-contact-block">
-          <div
-            data-w-id="3f5e7b30-db15-3e95-a352-38afd12b74b2"
-            class="contact-form-wrap-version-one"
-          >
-            <div class="form-title-wrap">
-              <h2>Let&#x27;s talk</h2>
-              <div class="limit-360">
-                <p>Our working time Mon - Sat (9:00AM - 7:00PM IST)</p>
-              </div>
-            </div>
-            <div class="form-block w-form">
-              <form
-                id="wf-form-Email-Form-Version-One"
-                name="wf-form-Email-Form-Version-One"
-                data-name="Email Form Version One"
-                method="get"
-                data-wf-page-id="640042519dc39207e9160cb1"
-                data-wf-element-id="3f5e7b30-db15-3e95-a352-38afd12b74ba"
-                onsubmit="return validateForm(event)"
-              >
-                <div class="w-layout-grid form-input-grid">
-                  <div class="input-wrap">
-                    <input
-                      class="text-field w-input"
-                      maxlength="256"
-                      name="name-2"
-                      data-name="Name 2"
-                      placeholder="Name"
-                      type="text"
-                      style="color: white"
-                      id="name-2"
-                      required
-                    />
-                  </div>
-                  <div class="input-wrap">
-                    <input
-                      class="text-field w-input"
-                      maxlength="256"
-                      name="Surname-2"
-                      data-name="Surname 2"
-                      placeholder="Surname"
-                      type="text"
-                      style="color: white"
-                      id="Surname-2"
-                      required
-                    />
-                  </div>
-                </div>
-                <div class="input-wrap">
-                  <input
-                    class="text-field w-input"
-                    maxlength="256"
-                    name="Email-2"
-                    data-name="Email 2"
-                    placeholder="Email address"
-                    type="email"
-                    style="color: white"
-                    id="Email-2"
-                    required
-                  />
-                </div>
-                <div class="input-wrap">
-                  <input
-                    class="text-field w-input"
-                    maxlength="256"
-                    name="Phone-Number-2"
-                    data-name="Phone Number 2"
-                    placeholder="Phone Number"
-                    type="tel"
-                    style="color: white"
-                    id="Phone-Number-2"
-                    required
-                  />
-                </div>
-                <div class="input-wrap">
-                  <textarea
-                    id="Message-2"
-                    name="Message-2"
-                    maxlength="5000"
-                    data-name="Message 2"
-                    placeholder="Your message..."
-                    style="color: white"
-                    class="text-field text-area-size w-input"
-                    required
-                  ></textarea>
-                </div>
 
-                <div class="submit-wrap">
-                  <input
-                    type="submit"
-                    data-wait="Please wait..."
-                    class="cta w-button"
-                    value="Send Now"
-                  />
-                </div>
-              </form>
-              <div class="success-message w-form-done" style="display: none">
-                <div>Thank you! Your submission has been received!</div>
-              </div>
-              <div class="w-form-fail" style="display: none">
-                <div>Oops! Something went wrong while submitting the form.</div>
-              </div>
-            </div>
-          </div>
-          <div
-            data-w-id="3f5e7b30-db15-3e95-a352-38afd12b74d3"
-            class="contact-wrap"
-          >
-            <div class="contact-image">
-              <img
-                src="https://ik.imagekit.io/czay6zcnk/Codenera/banner.jpg?updatedAt=1723402665613"
-                loading="lazy"
-                sizes="(max-width: 479px) 93vw, (max-width: 767px) 94vw, (max-width: 991px) 550px, (max-width: 1439px) 43vw, 510px"
-                alt=""
-                class="image"
-              />
-            </div>
-            <div class="contact-quote-wrap">
-              <h1>HIRE FROM US!</h1>
-              <a href="mailto:hr@codenera.in" style="text-decoration: none"
-                >Mail us :hr@codenera.in</a
-              >
-              <a href="tel:+918087619044" style="text-decoration: none"
-                >Contact :+918087619044</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="space-100"></div>
     <div class="footer">
       <div class="main-container footer-container w-container">
@@ -447,56 +315,6 @@
           dropdownContent.classList.toggle("show");
         });
       });
-    </script>
-
-    <script>
-      function validateForm(event) {
-        event.preventDefault();
-
-        console.log("Form validation script running..."); // Debugging statement
-
-        const name = document.getElementById("name-2").value.trim();
-        const surname = document.getElementById("Surname-2").value.trim();
-        const email = document.getElementById("Email-2").value.trim();
-        const phone = document.getElementById("Phone-Number-2").value.trim();
-        const message = document.getElementById("Message-2").value.trim();
-
-        //debuddging 
-        console.log("Name:", name); 
-        console.log("Surname:", surname); 
-        console.log("Email:", email); 
-        console.log("Phone:", phone); 
-        console.log("Message:", message); 
-
-        // Basic form validation
-        if (!name || !surname || !email || !phone || !message) {
-          document.querySelector(".w-form-fail").style.display = "block";
-          return false;
-        }
-
-        // Hide the error message if validation passes
-        document.querySelector(".w-form-fail").style.display = "none";
-
-        const formData = {
-          name: name,
-          surname: surname,
-          email: email,
-          phone: phone,
-          message: message,
-        };
-
-        console.log("Form data submitted:", formData); // Main console log statement
-
-        // Show the success message
-        document.querySelector(".success-message").style.display = "block";
-
-        // Redirect to thank you page after a short delay
-        setTimeout(() => {
-          window.location.href = "/thankyou";
-        }, 2000);
-
-        return false; // Prevent default form submission
-      }
     </script>
 
     <script
