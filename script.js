@@ -42477,7 +42477,7 @@ Arguments: ` +
           q = /list-manage[1-9]?.com/i,
           E = t.debounce(function () {
             d(
-              "Oops! This page has improperly configured forms. Please contact your website administrator to fix this issue."
+              ""
             );
           }, 100);
         r.ready =
@@ -42500,49 +42500,68 @@ Arguments: ` +
             i.length && i.each(w);
         }
         function w(ee, ce) {
-          var C = e(ce),
-            I = e.data(ce, s);
-          I || (I = e.data(ce, s, { form: C })), P(I);
-          var z = C.closest("div.w-form");
-          (I.done = z.find("> .w-form-done")),
-            (I.fail = z.find("> .w-form-fail")),
-            (I.fileUploads = z.find(".w-file-upload")),
-            I.fileUploads.each(function (ie) {
-              ae(ie, I);
-            });
-          var _ =
-            I.form.attr("aria-label") || I.form.attr("data-name") || "Form";
-          I.done.attr("aria-label") || I.form.attr("aria-label", _),
-            I.done.attr("tabindex", "-1"),
-            I.done.attr("role", "region"),
-            I.done.attr("aria-label") ||
-              I.done.attr("aria-label", _ + " success"),
-            I.fail.attr("tabindex", "-1"),
-            I.fail.attr("role", "region"),
-            I.fail.attr("aria-label") ||
-              I.fail.attr("aria-label", _ + " failure");
-          var Y = (I.action = C.attr("action"));
-          if (
-            ((I.handler = null),
-            (I.redirect = C.attr("data-redirect")),
-            q.test(Y))
-          ) {
-            I.handler = W;
-            return;
-          }
-          if (!Y) {
-            if (c) {
-              I.handler = (() => {
-                let ie = e$().default;
-                return ie(P, o, Xm, le, ne, Q, d, V, D, c, G, e, g);
-              })();
-              return;
-            }
-            E();
-          }
+          
         }
-        
-      
+        function x() {
+          (y = !0),
+            n.on("submit", s + " form", function (ie) {
+              var J = e.data(this, s);
+              J.handler && ((J.evt = ie), J.handler(J));
+            });
+          let ee = ".w-checkbox-input",
+            ce = ".w-radio-input",
+            C = "w--redirected-checked",
+            I = "w--redirected-focus",
+            z = "w--redirected-focus-visible",
+            _ = ":focus-visible, [data-wf-focus-visible]",
+            Y = [
+              ["checkbox", ee],
+              ["radio", ce],
+            ];
+          n.on(
+            "change",
+            s + ' form input[type="checkbox"]:not(' + ee + ")",
+            (ie) => {
+              e(ie.target).siblings(ee).toggleClass(C);
+            }
+          ),
+            n.on("change", s + ' form input[type="radio"]', (ie) => {
+              e(`input[name="${ie.target.name}"]:not(${ee})`).map((pe, _e) =>
+                e(_e).siblings(ce).removeClass(C)
+              );
+              let J = e(ie.target);
+              J.hasClass("w-radio-input") || J.siblings(ce).addClass(C);
+            }),
+            Y.forEach(([ie, J]) => {
+              n.on(
+                "focus",
+                s + ` form input[type="${ie}"]:not(` + J + ")",
+                (pe) => {
+                  e(pe.target).siblings(J).addClass(I),
+                    e(pe.target).filter(_).siblings(J).addClass(z);
+                }
+              ),
+                n.on(
+                  "blur",
+                  s + ` form input[type="${ie}"]:not(` + J + ")",
+                  (pe) => {
+                    e(pe.target).siblings(J).removeClass(`${I} ${z}`);
+                  }
+                );
+            });
+        }
+        function P(ee) {
+          var ce = (ee.btn = ee.form.find(':input[type="submit"]'));
+          (ee.wait = ee.btn.attr("data-wait") || null),
+            (ee.success = !1),
+            ce.prop("disabled", !1),
+            ee.label && ce.val(ee.label);
+        }
+        function D(ee) {
+          var ce = ee.btn,
+            C = ee.wait;
+          ce.prop("disabled", !0), C && ((ee.label = ce.val()), ce.val(C));
+        }
         function Q(ee, ce) {
           var C = null;
           return (
