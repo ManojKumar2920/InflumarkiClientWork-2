@@ -453,20 +453,28 @@
       function validateForm(event) {
         event.preventDefault();
 
-        console.log("Form validation script running..."); // Debugging statement
-
         const name = document.getElementById("name-2").value.trim();
         const surname = document.getElementById("Surname-2").value.trim();
         const email = document.getElementById("Email-2").value.trim();
         const phone = document.getElementById("Phone-Number-2").value.trim();
         const message = document.getElementById("Message-2").value.trim();
 
-        //debuddging 
-        console.log("Name:", name); 
-        console.log("Surname:", surname); 
-        console.log("Email:", email); 
-        console.log("Phone:", phone); 
-        console.log("Message:", message); 
+        // Regex pattern to allow only alphabetic characters and spaces
+        const namePattern = /^[A-Za-z\s]+$/;
+
+        // Validate the Name field
+        if (!namePattern.test(name)) {
+          alert("Please enter a valid Name (letters and spaces only).");
+          document.getElementById("name-2").focus();
+          return false;
+        }
+
+        // Validate the Surname field
+        if (!namePattern.test(surname)) {
+          alert("Please enter a valid Surname (letters and spaces only).");
+          document.getElementById("Surname-2").focus();
+          return false;
+        }
 
         // Basic form validation
         if (!name || !surname || !email || !phone || !message) {
@@ -485,7 +493,7 @@
           message: message,
         };
 
-        console.log("Form data submitted:", formData); // Main console log statement
+        console.log("Form data submitted:", formData); // Log the form data
 
         // Show the success message
         document.querySelector(".success-message").style.display = "block";
